@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+    <style>
+        body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
+        .grid { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+        .book { background: white; padding: 10px; border-radius: 5px; width: 180px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+        img { width: 100%; height: auto; }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h2>Books from books.toscrape.com</h2>
+    <div class="grid">
+        {% for book in books %}
+        <div class="book">
+            <h4>{{ book.title }}</h4>
+            <p>{{ book.price }}</p>
+            <p>{{ book.availability }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
